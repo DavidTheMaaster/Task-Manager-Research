@@ -19,4 +19,7 @@ The best form of knowing how to use task queues on videogames is actually, seein
 <br>
 ### Transistorrrrr
 
-<iframe width = "560" height = "315" src = "https://www.youtube.com/watch?v=xj-LH76lQvg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+In this video we can see how the player gives a series of events and then the game executes them in the order the player has given them. 
+<br>
+<video width = "560" height = "315" src = "https://www.youtube.com/watch?v=xj-LH76lQvg"></video>
+
