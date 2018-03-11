@@ -15,7 +15,7 @@ Pull queues are used for example on RPG games, when you give a character some or
 <br>
 
 
-	## Task Queues on videogames
+## Task Queues on videogames
 
 
 The best form of knowing how to use task queues on videogames is actually, seeing how other games have implemented them. So here are some examples of obvious tasks queues that can be seen at first sight. 
@@ -32,3 +32,10 @@ In this case we can see how the player gives a series of events and then the gam
 <br>
 	[![Transistor](https://user-images.githubusercontent.com/26002028/37254969-1435e594-2546-11e8-80ca-a5be6623a3eb.jpg)](https://www.youtube.com/watch?v=xj-LH76lQvg)
 
+##Command Pattern
+
+To achieve this task queues, we use whats is known as command pattern. *"Commands are an object-oriented replacement for callbacks"*(Gaming Programming Patterns) so as we treat tasks as objects and not as functions, we can apply command patterns from redefining keys to change the Actor of the action.
+
+### Redefining Keys
+
+First of all we must create a general class "Task" so the rest will inherit from it. This class must have a Constructor and Destructor an a virutal bool function for Execute the task itselfs. 
