@@ -22,47 +22,15 @@ public:
 	bool DoTask();
 
 private:
-	std::queue<Task*> TaskQueue;
+	//TODO 1 Create a queue of tasks
 	
 public:
 	Task * aux_task = nullptr;
 };
 
+//TODO 2 Create a class for each task you want to do (one for each direction)
+//TODO 6 Add the parameter "Actor" to all Execute() functions 
 
-class MoveLeft : public Task
-{
-public:
-	MoveLeft() {};
-	~MoveLeft() {};
 
-	bool Execute(Entity* actor);
-};
-
-class MoveRight : public Task
-{
-public:
-	MoveRight() {};
-	~MoveRight() {};
-
-	bool Execute(Entity* actor);
-};
-
-class MoveForward : public Task
-{
-public:
-	MoveForward() {};
-	~MoveForward() {};
-
-	bool Execute(Entity* actor);
-};
-
-class MoveBackWard : public Task
-{
-public:
-	MoveBackWard() {};
-	~MoveBackWard() {};
-
-	bool Execute(Entity* actor);
-};
 #endif // !_TASKMANAGER_H__
 

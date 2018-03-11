@@ -27,6 +27,7 @@ public:
 	bool Movement();
 
 	bool CleanUp();
+	//TODO 4 Delete this functions when the TODO 2 is done
 
 public:
 	iPoint position;
@@ -39,7 +40,8 @@ public:
 	Entity* Actor = nullptr;
 
 private:
-	Task *		buttonW = nullptr;
+	//TODO 4 Add new task for each button
+	Task*		buttonW = nullptr;
 	Task*		buttonA = nullptr;
 	Task*		buttonS = nullptr;
 	Task*		buttonD = nullptr;

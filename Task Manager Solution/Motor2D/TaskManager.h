@@ -22,6 +22,7 @@ public:
 	bool DoTask();
 
 private:
+	//TODO 1 Create a queue of tasks
 	std::queue<Task*> TaskQueue;
 	
 public:
@@ -37,6 +38,8 @@ public:
 
 	bool Execute(Entity* actor);
 };
+//TODO 2 Create a class for each task you want to do (one for each direction)
+//TODO 6 Add the parameter "Actor" to all Execute() functions 
 
 class MoveRight : public Task
 {

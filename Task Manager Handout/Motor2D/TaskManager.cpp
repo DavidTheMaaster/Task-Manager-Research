@@ -6,14 +6,15 @@
 
 bool Task::Update(float dt)
 {
+	bool ret = false;
 	if (App->input->GetKey(SDL_SCANCODE_SPACE) == KEY_DOWN)
 	{
-		//TODO
+		//TODO 3 Pop the first task of the list
 	}
 
-	DoTask();
+	ret = DoTask();
 
-	return true;
+	return ret;
 }
 
 bool Task::CleanUp()
@@ -23,7 +24,7 @@ bool Task::CleanUp()
 
 bool Task::AddTask(Task * task)
 {
-	TaskQueue.push(task);
+	//TODO 3 Add the new task to the list
 	return true;
 }
 
@@ -31,16 +32,7 @@ bool Task::DoTask()
 {
 	if (aux_task != nullptr)
 	{
-		if (aux_task->Execute(App->player->Actor))
-		{
-			if (TaskQueue.size() != 0)
-			{
-				aux_task = TaskQueue.front();
-				TaskQueue.pop();
-			}
-			else aux_task = nullptr;
-
-		}
+	//TODO 3 If the task is finished, pop the next task until the queue is empty
 	}
 	return true;
 }

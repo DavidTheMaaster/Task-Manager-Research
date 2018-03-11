@@ -70,8 +70,10 @@ bool MoveBackWard::Execute(Entity* actor)
 
 bool Task::Update(float dt)
 {
+	bool ret = false; 
 	if (App->input->GetKey(SDL_SCANCODE_SPACE) == KEY_DOWN)
 	{
+		//TODO 3 Pop the first task of the list
 		if (aux_task == nullptr && TaskQueue.size() != 0)
 		{
 			aux_task = TaskQueue.front();
@@ -79,9 +81,9 @@ bool Task::Update(float dt)
 		}
 	}
 
-	DoTask();
+	ret = DoTask();
 
-	return true;
+	return ret;
 }
 
 bool Task::CleanUp()
@@ -95,7 +97,7 @@ bool Task::CleanUp()
 
 bool Task::AddTask(Task * task)
 {
-
+	//TODO 3 Add the new task to the list
 	TaskQueue.push(task);
 
 	return true;
@@ -105,6 +107,7 @@ bool Task::DoTask()
 {
 	if (aux_task != nullptr)
 	{
+		//TODO 3 If the task is finished, pop the next task until the queue is empty
 		if (aux_task->Execute(App->player->Actor))
 		{
 			if (TaskQueue.size() != 0)

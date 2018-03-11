@@ -55,8 +55,21 @@ bool j1Player::Update(float dt)
 	return true;
 }
 
+
+bool j1Player::CleanUp()
+{
+	//TODO 4 Remember to delete the new Tasks
+	delete buttonD;
+	delete buttonA;
+	delete buttonW;
+	delete buttonS;
+	return true;
+}
+
+
 bool j1Player::Movement()
 {
+	//TODO 4 Add the task to the queque 
 	if (App->input->GetKey(SDL_SCANCODE_A) == KEY_DOWN)
 	{
 		posaux = Actor->pos;
@@ -81,6 +94,7 @@ bool j1Player::Movement()
 
 	if (App->input->GetKey(SDL_SCANCODE_E) == KEY_DOWN)
 	{
+		//TODO 5 Exchange task so when you press A it goes to the right an so  
 		Task* auxtask = buttonA;
 		buttonA = buttonD;
 		buttonD = auxtask;
@@ -91,6 +105,7 @@ bool j1Player::Movement()
 
 	if (App->input->GetKey(SDL_SCANCODE_Q) == KEY_DOWN)
 	{
+		//TODO 6 Change the actor of the action
 		if (App->task->aux_task == nullptr)
 		{
 			if (Actor == Player)
@@ -101,14 +116,5 @@ bool j1Player::Movement()
 				Actor = Player;
 		}
 	}
-	return true;
-}
-
-bool j1Player::CleanUp()
-{
-	delete buttonD;
-	delete buttonA;
-	delete buttonW;
-	delete buttonS;
 	return true;
 }

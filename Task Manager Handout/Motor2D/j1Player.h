@@ -28,21 +28,21 @@ public:
 
 	bool CleanUp();
 
+	//TODO 4 Delete this functions when the TODO 2 is done
 	bool MoveForward();
 	bool MoveBackward();
 	bool MoveLeft();
 	bool MoveRight();
 
 public:
-	iPoint position;
 	iPoint posaux;
-	SDL_Rect player_rect;
 	iPoint speed;
 
 	Entity* Player = nullptr;
 	Entity* Enemy = nullptr;
 	Entity* Actor = nullptr;
 private:
+	//TODO 4 Add new task for each button
 };
 
 
