@@ -17,9 +17,9 @@ Pull queues are used for example on RPG games, when you give a character some or
 <br>
 The best form of knowing how to use task queues on videogames is actually, seeing how other games have implemented them. So here are some examples of obvious tasks queues that can be seen at first sight. 
 <br>
-### Transistorrrrr
+### Transistor
 
 In this video we can see how the player gives a series of events and then the game executes them in the order the player has given them. We'll learn how to make on similar system. 
 <br>
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=xj-LH76lQvg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+[![transistor_image](https://user-images.githubusercontent.com/26002028/37254969-1435e594-2546-11e8-80ca-a5be6623a3eb.jpg)](https://www.youtube.com/watch?v=xj-LH76lQvg)
 
