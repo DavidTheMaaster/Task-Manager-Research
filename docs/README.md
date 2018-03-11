@@ -14,16 +14,21 @@ For example, push queues are useful for example in a messaging system, such as W
 Pull queues are used for example on RPG games, when you give a character some orders and then the game executes them all in order. 
 <br>
 
-<p align="center">
-	<a ## Task Queues on videogames>
-</p>
-<br>
+
+	## Task Queues on videogames
+
+
 The best form of knowing how to use task queues on videogames is actually, seeing how other games have implemented them. So here are some examples of obvious tasks queues that can be seen at first sight. 
 <br>
+### They are Billions
+In this video (min 24-25) we can see how the player builds several buildings while the game is paused. But in fact, the game doesn't start building them until the game is unpaused. So all the task are saved on a queue and executed once the game unpauses.
+
+[![They_are_Billions](https://user-images.githubusercontent.com/26002028/37255163-d65fd5b0-2548-11e8-9078-554d85dbe2de.jpg)](https://www.youtube.com/watch?v=edaA0w5VxjQ)
+
+
 ### Transistor
 
-In this video we can see how the player gives a series of events and then the game executes them in the order the player has given them. We'll learn how to make on similar system. 
+In this case we can see how the player gives a series of events and then the game executes them in the order the player has given them. We'll learn how to make on similar system. 
 <br>
-<p align="center">
-	[![transistor_image](https://user-images.githubusercontent.com/26002028/37254969-1435e594-2546-11e8-80ca-a5be6623a3eb.jpg)](https://www.youtube.com/watch?v=xj-LH76lQvg)
-</p>
+	[![Transistor](https://user-images.githubusercontent.com/26002028/37254969-1435e594-2546-11e8-80ca-a5be6623a3eb.jpg)](https://www.youtube.com/watch?v=xj-LH76lQvg)
+
