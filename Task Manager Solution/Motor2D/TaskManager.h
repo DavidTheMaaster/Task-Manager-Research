@@ -11,7 +11,7 @@ class Task: public j1Module
 {
 public:
 	Task() {};
-	~Task() {};
+	virtual ~Task() {};
 
 	virtual bool Execute(Entity* actor) { return true; };
 
@@ -34,7 +34,7 @@ class MoveLeft : public Task
 {
 public:
 	MoveLeft() {};
-	~MoveLeft() {};
+	virtual  ~MoveLeft() {};
 
 	bool Execute(Entity* actor);
 };
@@ -45,7 +45,7 @@ class MoveRight : public Task
 {
 public:
 	MoveRight() {};
-	~MoveRight() {};
+	virtual  ~MoveRight() {};
 
 	bool Execute(Entity* actor);
 };
@@ -54,7 +54,7 @@ class MoveForward : public Task
 {
 public:
 	MoveForward() {};
-	~MoveForward() {};
+	virtual  ~MoveForward() {};
 
 	bool Execute(Entity* actor);
 };
@@ -63,7 +63,7 @@ class MoveBackWard : public Task
 {
 public:
 	MoveBackWard() {};
-	~MoveBackWard() {};
+	virtual  ~MoveBackWard() {};
 
 	bool Execute(Entity* actor);
 };

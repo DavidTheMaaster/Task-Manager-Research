@@ -11,7 +11,7 @@ class Task: public j1Module
 {
 public:
 	Task() {};
-	~Task() {};
+	virtual ~Task() {};
 
 	virtual bool Execute(Entity* actor) { return true; };
 

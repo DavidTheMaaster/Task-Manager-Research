@@ -32,10 +32,35 @@ In this case we can see how the player gives a series of events and then the gam
 <br>
 	[![Transistor](https://user-images.githubusercontent.com/26002028/37254969-1435e594-2546-11e8-80ca-a5be6623a3eb.jpg)](https://www.youtube.com/watch?v=xj-LH76lQvg)
 
-##Command Pattern
-
+## Command Pattern
+<br>
 To achieve this task queues, we use whats is known as command pattern. *"Commands are an object-oriented replacement for callbacks"*(Gaming Programming Patterns) so as we treat tasks as objects and not as functions, we can apply command patterns from redefining keys to change the Actor of the action.
 
 ### Redefining Keys
-
+<br>
 First of all we must create a general class "Task" so the rest will inherit from it. This class must have a Constructor and Destructor an a virutal bool function for Execute the task itselfs. 
+![Task Class](https://user-images.githubusercontent.com/26002028/37255436-a999f4b2-254c-11e8-8082-a97badfd8de1.PNG)
+Once this parent class is created, we can create a new subclass for each task we want to add. In this example, we are going to make a simple rect move on four directions. So we create a new subclass for each movement. 
+![MoveRight](https://user-images.githubusercontent.com/26002028/37255463-0241e8d6-254d-11e8-83a6-723eaf322d12.png)
+Now, on our input handler we create a pointer to command for each button we are going to use, in this casa W A S D.
+So now we created our pointers, we match them to their respective class
+![Pointers](https://user-images.githubusercontent.com/26002028/37255748-168d958e-2551-11e8-8e6d-7c39e0136f82.png)
+Now, all we have to do is change the effect when the Key A (For example) is pressed.
+Example:
+![moveleft](https://user-images.githubusercontent.com/26002028/37255777-8697531a-2551-11e8-947a-5db4fe5780f9.png)
+<br>
+### Change Actor
+<br>
+As we treat task as objects, we can make them act on any character we want. We only have to send as a parameter the actor of the task. So we can make a unique class for the action of jump and use it with all the characters in the game. 
+![captura](https://user-images.githubusercontent.com/26002028/37255839-6889c91a-2552-11e8-87e6-31de8039bfae.PNG)
+If we change the Actor, the task will execute for a different entity, such as the player, an enemy...
+<br>
+## Subclass Sandbox
+As you can see by now, the possibilities of the command pattern are almost infinite, so you'll finish with a great number of classes. To avoid that you can use a [Subclass Sandbox](http://gameprogrammingpatterns.com/subclass-sandbox.html). I let you a link when you can find all necessary information about it. 
+## USEFUL LINKS
+Here you can see some links I used to documented my research:
+ - [Game Programming Patter](http://gameprogrammingpatterns.com/command.html)
+ - [Google Cloud Platform](https://cloud.google.com/appengine/docs/standard/python/taskqueue/)
+ - [Source Making](https://sourcemaking.com/design_patterns/command/cpp/2)
+
+
