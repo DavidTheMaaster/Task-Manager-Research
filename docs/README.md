@@ -39,14 +39,20 @@ To achieve this task queues, we use whats is known as command pattern. *"Command
 ### Redefining Keys
 <br>
 First of all we must create a general class "Task" so the rest will inherit from it. This class must have a Constructor and Destructor an a virutal bool function for Execute the task itselfs. 
+<br>
 ![Task Class](https://user-images.githubusercontent.com/26002028/37255436-a999f4b2-254c-11e8-8082-a97badfd8de1.PNG)
+<br>
 Once this parent class is created, we can create a new subclass for each task we want to add. In this example, we are going to make a simple rect move on four directions. So we create a new subclass for each movement. 
+<br>
 ![MoveRight](https://user-images.githubusercontent.com/26002028/37255463-0241e8d6-254d-11e8-83a6-723eaf322d12.png)
+<br>
 Now, on our input handler we create a pointer to command for each button we are going to use, in this casa W A S D.
 So now we created our pointers, we match them to their respective class
+<br>
 ![Pointers](https://user-images.githubusercontent.com/26002028/37255748-168d958e-2551-11e8-8e6d-7c39e0136f82.png)
+<br>
 Now, all we have to do is change the effect when the Key A (For example) is pressed.
-Example:
+<br>**Example:**<br>
 ![moveleft](https://user-images.githubusercontent.com/26002028/37255777-8697531a-2551-11e8-947a-5db4fe5780f9.png)
 <br>
 ### Change Actor
