@@ -97,54 +97,60 @@ bool j1Player::Movement()
 
 bool j1Player::MoveLeft()
 {
+	bool ret = false;
 	if (Player->pos.x == posaux.x - 32)
 	{
 		posaux.x = Player->pos.x;
+		ret = true;
 	}
 	else
 	{
 		Player->pos.x -= speed.x;
 	}
-		return true;
+	return ret;
 }
 
 bool j1Player::MoveRight()
 {
+	bool ret = false;
 	if (Player->pos.x == posaux.x + 32)
 	{
 		posaux.x = Player->pos.x;
+		ret = true;
 	}
 	else
 	{
 		Player->pos.x += speed.x;
 	}
-	return true;
+	return ret;
 }
 
 bool j1Player::MoveForward()
 {
+	bool ret = false;
 	if (Player->pos.y == posaux.y - 32)
 	{
 		posaux.y = Player->pos.y;
-
+		ret = true;
 	}
 	else
 	{
 		Player->pos.y -= speed.y;
 	}
-	return false;
+	return ret;
 }
 
 bool j1Player::MoveBackward()
 {
+	bool ret = false;
 	if (Player->pos.y == posaux.y + 32)
 	{
 		posaux.y = Player->pos.y;
-
+		ret = true;
 	}
 	else
 	{
 		Player->pos.y += speed.y;
 	}
-	return false;
+	return ret;
 }
