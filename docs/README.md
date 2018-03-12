@@ -35,7 +35,8 @@ In this case we can see how the player gives a series of events and then the gam
 ## Command Pattern
 <br>
 To achieve this task queues, we use whats is known as command pattern. *"Commands are an object-oriented replacement for callbacks"*(Gaming Programming Patterns) so as we treat tasks as objects and not as functions, we can apply command patterns from redefining keys to change the Actor of the action.
-
+![command_pattern svg](https://user-images.githubusercontent.com/26002028/37271451-3fe15aba-25d3-11e8-8b28-fd795e31ea3b.png)
+		Wikipedia UML
 ### Redefining Keys
 <br>
 First of all we must create a general class "Task" so the rest will inherit from it. This class must have a Constructor and Destructor an a virutal bool function for Execute the task itselfs. 
@@ -68,5 +69,6 @@ Here you can see some links I used to documented my research:
  - [Game Programming Patter](http://gameprogrammingpatterns.com/command.html)
  - [Google Cloud Platform](https://cloud.google.com/appengine/docs/standard/python/taskqueue/)
  - [Source Making](https://sourcemaking.com/design_patterns/command/cpp/2)
+ - [Wikipedia](https://en.wikipedia.org/wiki/Command_pattern)
 
 
